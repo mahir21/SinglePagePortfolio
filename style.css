@@ -14,7 +14,7 @@ body {
 }
 
 .header-title {
-  position: absolute;
+  position: relative;
   width: 172px;
   height: 8px;
   font-style: normal;
@@ -61,11 +61,10 @@ body {
 
 /* Hero Section */
 .hero {
-  position: absolute;
-  width: 706px;
-  height: 303px;
-  left: 165px;
-  top: 198px;
+  position: relative;
+  width: 90%;
+  height: auto;
+  margin: 50px auto 0 auto;
 }
 
 .hero-title-name {
@@ -75,50 +74,47 @@ body {
 }
 
 .hero-pattern {
-  position: absolute;
+  position: relative;
   width: 530px;
-  height: 129px;
-  left: -100px;
-  top: -80px;
-  mix-blend-mode: normal;
+  top: -5vh;
+  left: -60vh;
   opacity: 0.9;
 }
 
 .hero-title {
-  position: absolute;
-  width: 709px;
-  height: 88px;
-  left: calc(50% - 709px / 2 + 1.5px);
-  top: calc(50% - 88px / 2 - 107.5px);
+  position: relative;
+  top: -10vh;
+  left: -5vh;
+  width: 50vw;
   font-style: normal;
   font-weight: bold;
-  font-size: 88px;
+  font-size: 4.5rem;
   line-height: 88px;
   letter-spacing: -2.5px;
   color: white;
 }
 
 .hero-subtitle {
-  position: absolute;
-  height: 84px;
-  top: 350px;
+  position: relative;
+  top: -10vh;
+  left: -5vh;
+  width: 40vw;
+
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
   color: #d9d9d9;
-  left: 0%;
-  right: 36.97%;
   font-family: "Space Grotesk", sans-serif;
 }
 
 .hero-contact-me {
   display: inline-block;
-  position: absolute;
+  position: relative;
   width: 117px;
   height: 26px;
-  left: 0px;
-  top: 500px;
+  left: -5vh;
+  top: -5vh;
   font-family: "Space Grotesk", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -146,7 +142,7 @@ body {
 
 .technology-icons p {
   font-size: 40px;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 /* Additional Technology Section Icons */
@@ -204,15 +200,16 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   padding: 40px;
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 500px;
   left: 0px;
-  top: 2600px;
+  top: -20vh;
   background: #242424;
 }
 
 .form-container {
+  position: relative;
+  top: 20vh;
   display: flex;
   flex-direction: column;
   width: 70%;
@@ -233,6 +230,8 @@ textarea {
 }
 
 .form-submit {
+  position: relative;
+  right: 11vh;
   background: none;
   border: none;
   border-bottom: 2px solid #4ee1a0;
@@ -246,9 +245,9 @@ textarea {
 
 /* Contact Form Pattern */
 .contact-form-pattern {
-  position: absolute;
-  top: 250px;
-  left: 0px;
+  position: relative;
+  top: 5vh;
+  left: -170vh;
   opacity: 0.9;
 }
 
@@ -260,8 +259,8 @@ textarea {
 
 /* Footer */
 .single-page-application-footer {
-  position: absolute;
-  top: 3050px;
+  position: relative;
+  top: 7vh;
   width: 100%;
   border: none;
   border-top: 2px solid white;
@@ -422,10 +421,8 @@ textarea {
 
   .social-icons {
     position: relative;
-    left: 0;
-    top: -55vh;
-    margin-top: 10px;
-    width: auto;
+    top: 20vh;
+    left: 5vh;
   }
 
   .profile-image {
@@ -448,10 +445,10 @@ textarea {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 80%;
     height: auto;
     left: 0;
-    top: 85vh;
+    top: -20vh;
     text-align: center;
   }
 
@@ -469,7 +466,7 @@ textarea {
 
   .hero-subtitle {
     position: relative;
-    top: 10vh;
+    top: 20vh;
     font-size: 1rem;
     left: 0;
     right: 0;
@@ -477,10 +474,12 @@ textarea {
 
   .hero-contact-me {
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 20px;
+    left: -5vh;
+    top: 30vh;
     width: auto;
+  }
+  .hero-pattern {
+    opacity: 0;
   }
   .technology-section {
     position: relative;
