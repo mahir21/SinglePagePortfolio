@@ -1,4 +1,6 @@
-/* Global Styles */
+/* ========================================================= */
+/*                     Global Styles                       */
+/* ========================================================= */
 body {
   background-color: black;
   color: white;
@@ -13,8 +15,11 @@ body {
   color: white;
 }
 
+/* ========================================================= */
+/*                      Header Section                     */
+/* ========================================================= */
 .header-title {
-  position: absolute;
+  position: relative;
   width: 172px;
   height: 8px;
   font-style: normal;
@@ -59,13 +64,14 @@ body {
   height: 720px;
 }
 
-/* Hero Section */
+/* ========================================================= */
+/*                      Hero Section                       */
+/* ========================================================= */
 .hero {
-  position: absolute;
-  width: 706px;
-  height: 303px;
-  left: 165px;
-  top: 198px;
+  position: relative;
+  width: 90%;
+  height: auto;
+  margin: 50px auto 0;
 }
 
 .hero-title-name {
@@ -75,50 +81,46 @@ body {
 }
 
 .hero-pattern {
-  position: absolute;
+  position: relative;
   width: 530px;
-  height: 129px;
-  left: -100px;
-  top: -80px;
-  mix-blend-mode: normal;
+  top: -5vh;
+  left: -60vh;
   opacity: 0.9;
 }
 
 .hero-title {
-  position: absolute;
-  width: 709px;
-  height: 88px;
-  left: calc(50% - 709px / 2 + 1.5px);
-  top: calc(50% - 88px / 2 - 107.5px);
+  position: relative;
+  top: -10vh;
+  left: -5vh;
+  width: 50vw;
   font-style: normal;
   font-weight: bold;
-  font-size: 88px;
+  font-size: 4.5rem;
   line-height: 88px;
   letter-spacing: -2.5px;
   color: white;
 }
 
 .hero-subtitle {
-  position: absolute;
-  height: 84px;
-  top: 350px;
+  position: relative;
+  top: -10vh;
+  left: -5vh;
+  width: 40vw;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
   color: #d9d9d9;
-  left: 0%;
-  right: 36.97%;
   font-family: "Space Grotesk", sans-serif;
 }
 
 .hero-contact-me {
   display: inline-block;
-  position: absolute;
+  position: relative;
   width: 117px;
   height: 26px;
-  left: 0px;
-  top: 500px;
+  left: -5vh;
+  top: -5vh;
   font-family: "Space Grotesk", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -130,10 +132,13 @@ body {
   text-underline-offset: 10px;
 }
 
-/* Technology Icons Section */
+/* ========================================================= */
+/*                  Technology Icons Section               */
+/* ========================================================= */
 .technology-section {
   height: 10%;
 }
+
 .technology-icons {
   border-top: 2px solid white;
   display: grid;
@@ -146,10 +151,10 @@ body {
 
 .technology-icons p {
   font-size: 40px;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
-/* Additional Technology Section Icons */
+/* Additional Technology Icons */
 .technology-section-icons {
   position: absolute;
   width: 530px;
@@ -159,11 +164,15 @@ body {
   mix-blend-mode: normal;
   opacity: 0.9;
 }
+
 .tech-exp {
   font-size: 1.7rem !important;
   font-weight: lighter;
 }
 
+/* ========================================================= */
+/*                   Project Section                       */
+/* ========================================================= */
 .project {
   padding-top: 20%;
   padding-bottom: 20%;
@@ -173,7 +182,6 @@ body {
   font-size: 4rem;
 }
 
-/* Project Details */
 .project-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -198,21 +206,24 @@ body {
   border-radius: 10px;
 }
 
-/* Contact Form */
+/* ========================================================= */
+/*                  Contact Form Section                   */
+/* ========================================================= */
 .contact-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   padding: 40px;
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 500px;
-  left: 0px;
-  top: 2600px;
+  left: 0;
+  top: -20vh;
   background: #242424;
 }
 
 .form-container {
+  position: relative;
+  top: 20vh;
   display: flex;
   flex-direction: column;
   width: 70%;
@@ -233,6 +244,8 @@ textarea {
 }
 
 .form-submit {
+  position: relative;
+  right: 11vh;
   background: none;
   border: none;
   border-bottom: 2px solid #4ee1a0;
@@ -246,9 +259,9 @@ textarea {
 
 /* Contact Form Pattern */
 .contact-form-pattern {
-  position: absolute;
-  top: 250px;
-  left: 0px;
+  position: relative;
+  top: 5vh;
+  left: -170vh;
   opacity: 0.9;
 }
 
@@ -258,17 +271,22 @@ textarea {
   font-weight: bold;
 }
 
-/* Footer */
+/* ========================================================= */
+/*                      Footer Section                     */
+/* ========================================================= */
 .single-page-application-footer {
-  position: absolute;
-  top: 3050px;
+  position: relative;
+  top: 7vh;
   width: 100%;
   border: none;
   border-top: 2px solid white;
+  margin-top: 100px;
 }
 
-/* ----------------------------------------------------- */
-/* Responsive Media Query */
+/* ========================================================= */
+/*              Responsive Styles: Tablet                */
+/* (min-width: 769px and max-width: 1024px)               */
+/* ========================================================= */
 @media (min-width: 769px) and (max-width: 1024px) {
   /* Header Adjustments */
   header {
@@ -317,7 +335,7 @@ textarea {
   .hero-title {
     position: relative;
     width: 100%;
-    font-size: 3.5rem; /* Slightly reduced */
+    font-size: 3.5rem;
     top: 0;
   }
   .hero-subtitle {
@@ -335,12 +353,11 @@ textarea {
 
   /* Technology Icons Adjustments */
   .technology-icons {
-    margin-top: 400px; /* Reduced from desktop */
-    grid-template-columns: 1fr 1fr; /* Adjusted to two columns */
+    margin-top: 400px;
+    grid-template-columns: 1fr 1fr;
     width: 90%;
     max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
   }
 
   .project {
@@ -348,18 +365,17 @@ textarea {
     top: 20vh;
   }
 
-  /* Project Details: Maintain two columns if possible */
+  /* Project Details Adjustments */
   .project-details {
     position: relative;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
-  /* Optionally adjust inner project item sizes if needed */
   .project-details > div {
-    width: auto; /* Remove fixed width for more fluid layout */
-    padding: 40px; /* Reduced padding */
+    width: auto;
+    padding: 40px;
     margin: 10px;
-    height: auto; /* Let content define height */
+    height: auto;
   }
 
   /* Contact Form Adjustments */
@@ -369,17 +385,14 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     height: auto;
-    top: 0px; /* Adjust as needed */
+    top: 0;
     gap: 30px;
     padding: 20px;
     margin: auto;
   }
-
   .form-container {
     width: 100%;
-
     input,
     label,
     textarea {
@@ -398,8 +411,11 @@ textarea {
   }
 }
 
+/* ========================================================= */
+/*              Responsive Styles: Mobile                */
+/* (max-width: 768px)                                    */
+/* ========================================================= */
 @media (max-width: 768px) {
-  /* Adjust body padding for smaller screens */
   body {
     padding-left: 3%;
     padding-right: 3%;
@@ -413,32 +429,28 @@ textarea {
     align-items: center;
     padding: 20px 0;
   }
-
   .header-title {
     left: 0;
     top: 10px;
     font-size: 28px;
   }
-
   .social-icons {
     position: relative;
-    left: 0;
-    top: -55vh;
-    margin-top: 10px;
-    width: auto;
+    top: 20vh;
+    left: 5vh;
   }
-
   .profile-image {
     position: relative;
+    width: 80%;
+    height: 50%;
     left: 0;
     top: 10px;
     display: flex;
     justify-content: center;
   }
-
   .profile-image img {
-    width: 80%;
-    max-width: 300px;
+    width: 1000px;
+    max-width: 600px;
     height: auto;
   }
 
@@ -448,39 +460,32 @@ textarea {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 80%;
     height: auto;
     left: 0;
-    top: 85vh;
+    top: -20vh;
     text-align: center;
   }
-
   .hero-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    /* position: relative;
-    width: 100%;
-    font-size: 3rem;
-    top: 0; */
   }
-
   .hero-subtitle {
     position: relative;
-    top: 10vh;
+    top: 20vh;
     font-size: 1rem;
-    left: 0;
-    right: 0;
   }
-
   .hero-contact-me {
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 20px;
+    left: -5vh;
+    top: 30vh;
     width: auto;
+  }
+  .hero-pattern {
+    opacity: 0;
   }
   .technology-section {
     position: relative;
@@ -499,7 +504,7 @@ textarea {
   .technology-icons::before {
     content: "";
     position: absolute;
-    top: -600px; /* Adjust this value to move the border upward */
+    top: -600px; /* Adjust to move the border upward */
     left: 0;
     right: 0;
     border-top: 2px solid white;
@@ -518,45 +523,33 @@ textarea {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
   .project-details > div {
     width: 90%;
     margin: 10px auto;
     padding: 20px;
   }
 
-  /* Contact Form: Adjust grid layout */
-  .contact-form {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 20px;
-  }
-
+  /* Contact Form: Adjust layout */
   .contact-form {
     position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     height: auto;
-    top: 100vh; /* Adjust as needed */
+    top: 100vh;
     gap: 30px;
-
+    padding: 20px;
     margin: auto;
   }
-
   .form-container {
     width: 100%;
-
     input,
     label,
     textarea {
       max-width: 100%;
     }
   }
-
   input,
   label,
   textarea {
