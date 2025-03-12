@@ -289,6 +289,11 @@ textarea {
 /* ========================================================= */
 @media (min-width: 769px) and (max-width: 1024px) {
   /* Header Adjustments */
+  .logo {
+    position: relative;
+    left: 85vh;
+    top: -30vh;
+  }
   header {
     position: relative;
     display: flex;
@@ -298,21 +303,22 @@ textarea {
     padding: 20px 5%;
   }
   .header-title {
-    left: 0;
-    top: 10px;
+    position: relative;
+    left: 20vh;
+    top: 50vh;
     font-size: 28px;
   }
   .social-icons {
     position: relative;
-    left: 0;
-    top: 0;
+    left: -85vh;
+    top: -40vh;
     width: auto;
     margin-top: 0;
   }
   .profile-image {
     position: relative;
     left: 0;
-    top: 10px;
+    top: 20vh;
     display: flex;
     justify-content: center;
   }
@@ -328,7 +334,7 @@ textarea {
     width: 100%;
     height: auto;
     left: 0;
-    top: 150px;
+    top: -5vh;
     padding: 20px;
     margin: 0 auto;
   }
@@ -341,6 +347,7 @@ textarea {
   .hero-subtitle {
     position: relative;
     top: 10px;
+    left: 60vh;
     font-size: 1.1rem;
   }
   .hero-contact-me {
@@ -362,7 +369,8 @@ textarea {
 
   .project {
     position: relative;
-    top: 20vh;
+    top: 50vh;
+    text-align: center;
   }
 
   /* Project Details Adjustments */
