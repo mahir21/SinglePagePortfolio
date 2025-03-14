@@ -4,19 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Mahir Jeet</title>
-    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body>
-    <!-- Header -->
-    <header class="navbar">
-      <h1 class="logo">Mahir Jeet</h1>
+  <body class="bg-black text-white">
+    <header
+      class="flex flex-col items-center justify-center md:flex-row justify-between bg-black"
+    >
+      <h1 class="text-2xl p-8 md:text-3xl font-bold">Mahir Jeet</h1>
 
-      <div class="profile-image">
-        <img src="assets/images/LinkedlnProfilePicture.png" alt="Mahir Jeet" />
-      </div>
-
-      <div class="social-icons">
+      <div class="flex space-x-6">
         <a href="https://github.com/mahir21"
           ><img src="./assets/images/icon-github.svg" alt="GitHub icon"
         /></a>
@@ -35,216 +33,225 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content">
-        <img
-          src="./assets/images/pattern-rings.svg"
-          alt="rings"
-          class="hero-pattern"
-        />
 
-        <h1 class="hero-title">
-          Nice to meet you, I'm <span class="hero-title-name">Mahir Jeet</span>
-        </h1>
+    <section>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 p-4 mt-8 border-b-2"
+      >
+        <!-- Left Column: Text Content -->
+        <div>
+          <div
+            class="text-2xl font-bold text-center md:text-left text-4xl mb-4"
+          >
+            Nice to meet you, I'm
+            <span class="text-yellow-300">Mahir Jeet</span>
+          </div>
+          <div class="text-xl text-center md:text-left text-3xl">
+            A front-end developer based in the USA. I create websites and apps
+            that are fast, modern, and accessible.
+          </div>
+          <div class="mt-4 text-center md:text-left">
+            <span class="border-b-2 border-yellow-300 md:text-2xl font-bold"
+              >Contact Me</span
+            >
+          </div>
+        </div>
 
-        <p class="hero-subtitle">
-          A front-end developer based in the USA. I create websites and web apps
-          that are fast, modern, and accessible.
-        </p>
+        <!-- Right Column: Image Content -->
+        <div class="flex justify-center items-center">
+          <img
+            class="rounded-md w-auto h-auto"
+            src="assets/images/LinkedlnProfilePicture.png"
+            alt="Mahir Jeet"
+          />
+        </div>
       </div>
-
-      <div class="hero-contact-me">CONTACT ME</div>
     </section>
 
     <section class="technology-section">
-      <div class="technology-icons">
-        <div>
-          <p  class="tech-name">HTML
-            <p class="tech-exp">2 Years Experience</p>
-          </p>
-          
-        </div>
-        <div>
-          <p class="tech-name">
-            CSS
-          </p>
-            <p class="tech-exp">2 Years Experience<p>
-          </p>
-         
-        </div>
-        <div>
-          <p class="tech-name">Javascript
-           <p class="tech-exp">2 years Experience<p>
-          </p>
-       
+      <h1 class="text-3xl font-bold text-center mt-8 mb-8">Tech Stack</h1>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-y-8 place-items-center text-2xl p-8"
+      >
+        <!-- HTML -->
+        <div class="text-center">
+          <div class="tech-name md:text-2xl font-bold">HTML</div>
+          <p class="text-sm">2 Years Experience</p>
         </div>
 
-        <div>
-          <p>Accessibility
-           <p  class="tech-exp">2 Years Expereience</p>
-          </p>
-         
+        <!-- CSS -->
+        <div class="text-center md:text-2xl font-bold">
+          <div class="tech-name">CSS</div>
+          <p class="text-sm">2 Years Experience</p>
         </div>
 
-        <div>
-          <p>React
-           <p  class="tech-exp">2 Years Expereince</p>
-          </p>
-        
+        <!-- JavaScript -->
+        <div class="text-center md:text-2xl font-bold">
+          <div class="tech-name">Javascript</div>
+          <p class="text-sm">2 Years Experience</p>
         </div>
 
-        <div>
-          <p>Sass
-            <p  class="tech-exp">2 Years Expereince</p>
-          </p>
-         
+        <!-- React -->
+        <div class="text-center md:text-2xl font-bold">
+          <div class="tech-name">React</div>
+          <p class="text-sm">2 Years Experience</p>
         </div>
-        <img
-          src="./assets/images/pattern-rings.svg"
-          alt="rings"
-          class="technology-section-icons"
-        />
+
+        <!-- NextJS -->
+        <div class="text-center md:text-2xl font-bold">
+          <div class="tech-name">NextJS</div>
+          <p class="text-sm">2 Years Experience</p>
+        </div>
       </div>
     </section>
 
     <section class="project">
-      <h1 class="project-header">Projects</h1>
-      <div class="project-details">
-        <div>
+      <h1 class="text-3xl font-bold text-center mt-8 mb-8">Projects</h1>
+      <div class="grid grid-cols-1 place-items-center md:grid-cols-2">
+        <div class="flex flex-col w-80 h-80 item-center text-center">
           <a href="https://mahir21.github.io/TicTacToe/">
             <img
               src="./assets/images/thumbnail-project-1-large.webp"
               alt="Interactive"
+              class="rounded-lg"
             />
           </a>
-          <p>TIC TAC TOE</p>
-          <p>HTML CSS Javascript</p>
+          <p class="text-xl font-bold">TIC TAC TOE</p>
+          <p class="text-gray-400">HTML CSS Javascript</p>
         </div>
 
-        <div>
+        <div class="flex flex-col w-80 h-80 item-center text-center">
           <a href="https://ecommerce-latest-jet.vercel.app/">
             <img
               src="./assets/images/thumbnail-project-2-large.webp"
               alt="Interactive"
             />
           </a>
-          <p>E-Commerce</p>
-          <p>Tailwind React NextJs</p>
+          <p class="text-xl font-bold">TIC TAC TOE</p>
+          <p class="text-gray-400">HTML CSS Javascript</p>
         </div>
 
-        <div>
+        <div class="flex flex-col w-80 h-80 item-center text-center">
           <a href="https://reacttodolist-weld.vercel.app/">
             <img
               src="./assets/images/thumbnail-project-3-large.webp"
               alt="Interactive"
             />
           </a>
-          <p>TODO WEB APP</p>
-          <p>Tailwind React</p>
+          <p class="text-xl font-bold">TIC TAC TOE</p>
+          <p class="text-gray-400">HTML CSS Javascript</p>
         </div>
 
-        <div>
+        <div class="flex flex-col w-80 h-80 item-center text-center">
           <a href="#">
             <img
               src="./assets/images/thumbnail-project-4-large.webp"
               alt="Interactive"
             />
           </a>
-          <p>ENTERTAINMENT WEB APP</p>
-          <p>HTML CSS JAVASCRIPT</p>
+          <p class="text-xl font-bold">TIC TAC TOE</p>
+          <p class="text-gray-400">HTML CSS Javascript</p>
         </div>
 
-        <div>
+        <div class="flex flex-col w-80 h-80 item-center text-center">
           <a href="#">
             <img
               src="./assets/images/thumbnail-project-5-large.webp"
               alt="Interactive"
             />
           </a>
-          <p>MEMORY GAME</p>
-          <p>HTML CSS JAVASCRIPT</p>
+          <p class="text-xl font-bold">TIC TAC TOE</p>
+          <p class="text-gray-400">HTML CSS Javascript</p>
         </div>
 
-        <div>
+        <div class="flex flex-col w-80 h-80 item-center text-center">
           <a href="#">
             <img
               src="./assets/images/thumbnail-project-6-large.webp"
               alt="Interactive"
             />
           </a>
-          <p>ART GALLERY SHOWCASE</p>
-          <p>HTML CSS JAVASCRIPT</p>
+          <p class="text-xl font-bold">TIC TAC TOE</p>
+          <p class="text-gray-400">HTML CSS Javascript</p>
         </div>
       </div>
     </section>
 
     <section class="contact-form">
-      <div class="contact-form-container">
-        <div>
-          <h1 class="contact-form-header">Contact</h1>
-          <p>
+      <div
+        class="bg-[#242424] flex flex-col md:flex-row gap-8 mx-auto px-4 py-8"
+      >
+        <!-- Left Column: Text Content -->
+        <div class="w-full md:w-1/2 mx-auto text-center md:text-left">
+          <h1 class="text-5xl font-bold">Contact</h1>
+          <p class="mt-4">
             I would love to hear about your project and how I could help. Please
             fill in the form, and I’ll get back to you as soon as possible.
           </p>
         </div>
 
-        <div>
+        <!-- Right Column: Form Content -->
+        <div class="w-full md:w-1/2 mx-auto flex justify-center">
           <form
-            class="form-container"
+            class="flex flex-col gap-4 w-full max-w-md"
             action="https://formsubmit.co/mahirbegh21@gmail.com"
             method="POST"
           >
             <input
+              class="bg-transparent border-b-2 border-white p-2"
               type="text"
               id="name"
               name="name"
               placeholder="Name"
               required
             />
-
             <input
+              class="bg-transparent border-b-2 border-white p-2"
               type="email"
               id="email"
               name="email"
               placeholder="Email"
               required
             />
-
             <textarea
+              class="bg-transparent border-b-2 border-white p-2"
               id="message"
               name="message"
               placeholder="Enter Your Message"
               required
             ></textarea>
-
-            <button class="form-submit" type="submit">Send Message</button>
+            <div class="flex justify-center">
+              <button
+                class="font-bold text-white border-b-2 border-yellow-300 py-2 px-4 hover:text-yellow-300"
+                type="submit"
+              >
+                Send Message
+              </button>
+            </div>
           </form>
-        </div>
-
-        <div class="contact-form-pattern">
-          <img src="assets/images/pattern-rings.svg" />
         </div>
       </div>
     </section>
 
     <footer class="single-page-application-footer">
-      <p>Mahir Jeet</p>
-
-      <div class="social-icons">
-        <a href="https://github.com/mahir21/EcommerceLatest"
-          ><img src="./assets/images/icon-github.svg" alt="GitHub icon"
-        /></a>
-        <a href="#"
-          ><img src="./assets/images/icon-twitter.svg" alt="Twitter icon"
-        /></a>
-        <a href="https://www.linkedin.com/in/mahir-jeet-62a0031a7/"
-          ><img src="./assets/images/icon-linkedin.svg" alt="LinkedIn icon"
-        /></a>
-        <a href="#"
-          ><img
-            src="./assets/images/icon-frontend-mentor.svg"
-            alt="Frontend Mentor icon"
-        /></a>
+      <div class="grid grid-cols-2 gap-x-20 mt-16 item-center">
+        <div class="text-2xl justify-self-start">Mahir Jeet</div>
+        <div class="flex justify-self-end gap-x-4">
+          <a href="https://github.com/mahir21/EcommerceLatest"
+            ><img src="./assets/images/icon-github.svg" alt="GitHub icon"
+          /></a>
+          <a href="#"
+            ><img src="./assets/images/icon-twitter.svg" alt="Twitter icon"
+          /></a>
+          <a href="https://www.linkedin.com/in/mahir-jeet-62a0031a7/"
+            ><img src="./assets/images/icon-linkedin.svg" alt="LinkedIn icon"
+          /></a>
+          <a href="#"
+            ><img
+              src="./assets/images/icon-frontend-mentor.svg"
+              alt="Frontend Mentor icon"
+          /></a>
+        </div>
       </div>
     </footer>
   </body>
