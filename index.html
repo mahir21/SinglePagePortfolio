@@ -1,629 +1,629 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mahir Jeet</title>
-<meta name="description" content="Mahir Jeet, AI instructor at North Queens Community High School and co-founder of DateLift.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --paper:#FAF8F4;
-    --card:#FFFFFF;
-    --ink:#1E293B;
-    --ink-soft:#475569;
-    --gray:#6B7280;
-    --teal:#3B6E5E;
-    --teal-deep:#2C5347;
-    --teal-tint:#E7F0EC;
-    --border:#E7E2D9;
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--<meta charset="UTF-8">-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--<title>Mahir Jeet</title>-->
+<!--<meta name="description" content="Mahir Jeet, AI instructor at North Queens Community High School and co-founder of DateLift.">-->
+<!--<link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">-->
+<!--<style>-->
+<!--  :root{-->
+<!--    &#45;&#45;paper:#FAF8F4;-->
+<!--    &#45;&#45;card:#FFFFFF;-->
+<!--    &#45;&#45;ink:#1E293B;-->
+<!--    &#45;&#45;ink-soft:#475569;-->
+<!--    &#45;&#45;gray:#6B7280;-->
+<!--    &#45;&#45;teal:#3B6E5E;-->
+<!--    &#45;&#45;teal-deep:#2C5347;-->
+<!--    &#45;&#45;teal-tint:#E7F0EC;-->
+<!--    &#45;&#45;border:#E7E2D9;-->
 
-    --serif:'Source Serif 4', serif;
-    --sans:'Inter', sans-serif;
-  }
+<!--    &#45;&#45;serif:'Source Serif 4', serif;-->
+<!--    &#45;&#45;sans:'Inter', sans-serif;-->
+<!--  }-->
 
-  *{ margin:0; padding:0; box-sizing:border-box; }
-  html{ scroll-behavior:smooth; }
-  body{
-    font-family:var(--sans);
-    background:var(--paper);
-    color:var(--ink);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  ::selection{ background:var(--teal-tint); color:var(--teal-deep); }
-  a{ color:var(--teal); text-decoration:none; transition:color .25s ease; }
-  a:hover{ color:var(--teal-deep); }
-  a:focus-visible, button:focus-visible{
-    outline:2px solid var(--teal);
-    outline-offset:3px;
-    border-radius:4px;
-  }
-  img{ max-width:100%; display:block; }
-  video{ max-width:100%; display:block; }
+<!--  *{ margin:0; padding:0; box-sizing:border-box; }-->
+<!--  html{ scroll-behavior:smooth; }-->
+<!--  body{-->
+<!--    font-family:var(&#45;&#45;sans);-->
+<!--    background:var(&#45;&#45;paper);-->
+<!--    color:var(&#45;&#45;ink);-->
+<!--    line-height:1.6;-->
+<!--    -webkit-font-smoothing:antialiased;-->
+<!--  }-->
+<!--  ::selection{ background:var(&#45;&#45;teal-tint); color:var(&#45;&#45;teal-deep); }-->
+<!--  a{ color:var(&#45;&#45;teal); text-decoration:none; transition:color .25s ease; }-->
+<!--  a:hover{ color:var(&#45;&#45;teal-deep); }-->
+<!--  a:focus-visible, button:focus-visible{-->
+<!--    outline:2px solid var(&#45;&#45;teal);-->
+<!--    outline-offset:3px;-->
+<!--    border-radius:4px;-->
+<!--  }-->
+<!--  img{ max-width:100%; display:block; }-->
+<!--  video{ max-width:100%; display:block; }-->
 
-  .wrap{ max-width:880px; margin:0 auto; padding:0 24px; }
+<!--  .wrap{ max-width:880px; margin:0 auto; padding:0 24px; }-->
 
-  /* ---------------- SKIP LINK ---------------- */
-  .skip-link{
-    position:absolute; left:-9999px; top:0;
-    background:var(--ink); color:#fff; padding:10px 16px; z-index:200;
-  }
-  .skip-link:focus{ left:12px; top:12px; }
+<!--  /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; SKIP LINK &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+<!--  .skip-link{-->
+<!--    position:absolute; left:-9999px; top:0;-->
+<!--    background:var(&#45;&#45;ink); color:#fff; padding:10px 16px; z-index:200;-->
+<!--  }-->
+<!--  .skip-link:focus{ left:12px; top:12px; }-->
 
-  /* ---------------- NAV ---------------- */
-  nav{
-    position:sticky; top:0; z-index:100;
-    background:rgba(250,248,244,0.96);
-    border-bottom:1px solid var(--border);
-    backdrop-filter:blur(6px);
-  }
-  .nav-inner{
-    max-width:880px; margin:0 auto; padding:16px 24px;
-    display:flex; align-items:center; justify-content:space-between;
-    flex-wrap:wrap; gap:12px;
-  }
-  .nav-name{
-    font-family:var(--serif);
-    font-weight:600;
-    font-size:18px;
-    color:var(--ink);
-  }
-  .nav-links{ display:flex; gap:8px; flex-wrap:wrap; }
-  .nav-links a{
-    font-size:14px; font-weight:500; color:var(--ink-soft);
-    padding:6px 12px; border-radius:6px;
-    transition:background .25s ease, color .25s ease;
-  }
-  .nav-links a:hover{ background:var(--teal-tint); color:var(--teal-deep); }
+<!--  /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; NAV &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+<!--  nav{-->
+<!--    position:sticky; top:0; z-index:100;-->
+<!--    background:rgba(250,248,244,0.96);-->
+<!--    border-bottom:1px solid var(&#45;&#45;border);-->
+<!--    backdrop-filter:blur(6px);-->
+<!--  }-->
+<!--  .nav-inner{-->
+<!--    max-width:880px; margin:0 auto; padding:16px 24px;-->
+<!--    display:flex; align-items:center; justify-content:space-between;-->
+<!--    flex-wrap:wrap; gap:12px;-->
+<!--  }-->
+<!--  .nav-name{-->
+<!--    font-family:var(&#45;&#45;serif);-->
+<!--    font-weight:600;-->
+<!--    font-size:18px;-->
+<!--    color:var(&#45;&#45;ink);-->
+<!--  }-->
+<!--  .nav-links{ display:flex; gap:8px; flex-wrap:wrap; }-->
+<!--  .nav-links a{-->
+<!--    font-size:14px; font-weight:500; color:var(&#45;&#45;ink-soft);-->
+<!--    padding:6px 12px; border-radius:6px;-->
+<!--    transition:background .25s ease, color .25s ease;-->
+<!--  }-->
+<!--  .nav-links a:hover{ background:var(&#45;&#45;teal-tint); color:var(&#45;&#45;teal-deep); }-->
 
-  section{ padding:64px 0; position:relative; }
-  section:not(:last-of-type)::after{
-    content:"";
-    position:absolute; left:0; right:0; bottom:0;
-    height:1px;
-    background:linear-gradient(90deg, transparent, var(--border) 15%, var(--border) 85%, transparent);
-  }
+<!--  section{ padding:64px 0; position:relative; }-->
+<!--  section:not(:last-of-type)::after{-->
+<!--    content:"";-->
+<!--    position:absolute; left:0; right:0; bottom:0;-->
+<!--    height:1px;-->
+<!--    background:linear-gradient(90deg, transparent, var(&#45;&#45;border) 15%, var(&#45;&#45;border) 85%, transparent);-->
+<!--  }-->
 
-  .reveal{
-    opacity:0;
-    transform:translateY(16px);
-    transition:opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1);
-  }
-  .reveal.is-visible{
-    opacity:1;
-    transform:translateY(0);
-  }
+<!--  .reveal{-->
+<!--    opacity:0;-->
+<!--    transform:translateY(16px);-->
+<!--    transition:opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1);-->
+<!--  }-->
+<!--  .reveal.is-visible{-->
+<!--    opacity:1;-->
+<!--    transform:translateY(0);-->
+<!--  }-->
 
-  .eyebrow{
-    font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;
-    color:var(--teal); margin-bottom:12px;
-  }
-  h2{
-    font-family:var(--serif);
-    font-weight:600;
-    font-size:30px;
-    color:var(--ink);
-    margin-bottom:20px;
-    line-height:1.25;
-  }
-  p{ color:var(--ink-soft); font-size:16px; }
+<!--  .eyebrow{-->
+<!--    font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;-->
+<!--    color:var(&#45;&#45;teal); margin-bottom:12px;-->
+<!--  }-->
+<!--  h2{-->
+<!--    font-family:var(&#45;&#45;serif);-->
+<!--    font-weight:600;-->
+<!--    font-size:30px;-->
+<!--    color:var(&#45;&#45;ink);-->
+<!--    margin-bottom:20px;-->
+<!--    line-height:1.25;-->
+<!--  }-->
+<!--  p{ color:var(&#45;&#45;ink-soft); font-size:16px; }-->
 
-  /* ---------------- HERO / ABOUT ---------------- */
-  .hero{
-    padding:72px 0 56px;
-    display:grid;
-    grid-template-columns:auto 1fr;
-    gap:36px;
-    align-items:center;
-    animation:hero-in .8s cubic-bezier(.22,.61,.36,1) both;
-  }
-  @keyframes hero-in{
-    from{ opacity:0; transform:translateY(10px); }
-    to{ opacity:1; transform:translateY(0); }
-  }
-  .hero-photo{
-    width:140px; height:140px;
-    border-radius:50%;
-    overflow:hidden;
-    border:4px solid var(--card);
-    box-shadow:0 1px 2px rgba(30,41,59,0.04), 0 8px 24px rgba(30,41,59,0.08), 0 0 0 1px var(--border);
-    flex-shrink:0;
-    transition:box-shadow .4s ease, transform .4s ease;
-  }
-  .hero-photo:hover{
-    transform:translateY(-2px);
-    box-shadow:0 2px 4px rgba(30,41,59,0.06), 0 14px 32px rgba(30,41,59,0.12), 0 0 0 1px var(--border);
-  }
-  .hero-photo img{ width:100%; height:100%; object-fit:cover; object-position:50% 20%; }
-  .hero-text h1{
-    font-family:var(--serif);
-    font-weight:700;
-    font-size:clamp(30px,4vw,40px);
-    color:var(--ink);
-    margin-bottom:8px;
-  }
-  .hero-role{
-    font-size:17px; color:var(--teal-deep); font-weight:500; margin-bottom:14px;
-  }
-  .hero-text p{ max-width:560px; font-size:16px; }
-  .hero-links{ display:flex; gap:10px; margin-top:18px; flex-wrap:wrap; }
-  .btn{
-    display:inline-flex; align-items:center; gap:8px;
-    font-size:14px; font-weight:500;
-    padding:10px 18px; border-radius:8px;
-    border:1px solid var(--border);
-    color:var(--ink);
-    background:var(--card);
-    transition:border-color .25s ease, color .25s ease, transform .15s ease, box-shadow .25s ease, background .25s ease;
-  }
-  .btn:hover{
-    border-color:var(--teal);
-    color:var(--teal-deep);
-    transform:translateY(-1px);
-    box-shadow:0 4px 12px rgba(59,110,94,0.12);
-  }
-  .btn:active{ transform:translateY(0); box-shadow:none; }
-  .btn.primary{ background:var(--teal); color:#fff; border-color:var(--teal); }
-  .btn.primary:hover{
-    background:var(--teal-deep); border-color:var(--teal-deep); color:#fff;
-    box-shadow:0 6px 16px rgba(44,83,71,0.25);
-  }
+<!--  /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; HERO / ABOUT &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+<!--  .hero{-->
+<!--    padding:72px 0 56px;-->
+<!--    display:grid;-->
+<!--    grid-template-columns:auto 1fr;-->
+<!--    gap:36px;-->
+<!--    align-items:center;-->
+<!--    animation:hero-in .8s cubic-bezier(.22,.61,.36,1) both;-->
+<!--  }-->
+<!--  @keyframes hero-in{-->
+<!--    from{ opacity:0; transform:translateY(10px); }-->
+<!--    to{ opacity:1; transform:translateY(0); }-->
+<!--  }-->
+<!--  .hero-photo{-->
+<!--    width:140px; height:140px;-->
+<!--    border-radius:50%;-->
+<!--    overflow:hidden;-->
+<!--    border:4px solid var(&#45;&#45;card);-->
+<!--    box-shadow:0 1px 2px rgba(30,41,59,0.04), 0 8px 24px rgba(30,41,59,0.08), 0 0 0 1px var(&#45;&#45;border);-->
+<!--    flex-shrink:0;-->
+<!--    transition:box-shadow .4s ease, transform .4s ease;-->
+<!--  }-->
+<!--  .hero-photo:hover{-->
+<!--    transform:translateY(-2px);-->
+<!--    box-shadow:0 2px 4px rgba(30,41,59,0.06), 0 14px 32px rgba(30,41,59,0.12), 0 0 0 1px var(&#45;&#45;border);-->
+<!--  }-->
+<!--  .hero-photo img{ width:100%; height:100%; object-fit:cover; object-position:50% 20%; }-->
+<!--  .hero-text h1{-->
+<!--    font-family:var(&#45;&#45;serif);-->
+<!--    font-weight:700;-->
+<!--    font-size:clamp(30px,4vw,40px);-->
+<!--    color:var(&#45;&#45;ink);-->
+<!--    margin-bottom:8px;-->
+<!--  }-->
+<!--  .hero-role{-->
+<!--    font-size:17px; color:var(&#45;&#45;teal-deep); font-weight:500; margin-bottom:14px;-->
+<!--  }-->
+<!--  .hero-text p{ max-width:560px; font-size:16px; }-->
+<!--  .hero-links{ display:flex; gap:10px; margin-top:18px; flex-wrap:wrap; }-->
+<!--  .btn{-->
+<!--    display:inline-flex; align-items:center; gap:8px;-->
+<!--    font-size:14px; font-weight:500;-->
+<!--    padding:10px 18px; border-radius:8px;-->
+<!--    border:1px solid var(&#45;&#45;border);-->
+<!--    color:var(&#45;&#45;ink);-->
+<!--    background:var(&#45;&#45;card);-->
+<!--    transition:border-color .25s ease, color .25s ease, transform .15s ease, box-shadow .25s ease, background .25s ease;-->
+<!--  }-->
+<!--  .btn:hover{-->
+<!--    border-color:var(&#45;&#45;teal);-->
+<!--    color:var(&#45;&#45;teal-deep);-->
+<!--    transform:translateY(-1px);-->
+<!--    box-shadow:0 4px 12px rgba(59,110,94,0.12);-->
+<!--  }-->
+<!--  .btn:active{ transform:translateY(0); box-shadow:none; }-->
+<!--  .btn.primary{ background:var(&#45;&#45;teal); color:#fff; border-color:var(&#45;&#45;teal); }-->
+<!--  .btn.primary:hover{-->
+<!--    background:var(&#45;&#45;teal-deep); border-color:var(&#45;&#45;teal-deep); color:#fff;-->
+<!--    box-shadow:0 6px 16px rgba(44,83,71,0.25);-->
+<!--  }-->
 
-  /* ---------------- SNAPSHOT STRIP ---------------- */
-  .snapshot{
-    display:grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap:1px;
-    background:var(--border);
-    border:1px solid var(--border);
-    border-radius:10px;
-    overflow:hidden;
-    margin-top:8px;
-    box-shadow:0 1px 3px rgba(30,41,59,0.04);
-  }
-  .snap-item{
-    background:var(--card);
-    padding:20px 16px;
-    text-align:center;
-    transition:background .3s ease;
-  }
-  .snap-item:hover{ background:var(--teal-tint); }
-  .snap-item .num{
-    font-family:var(--serif); font-weight:700; font-size:26px; color:var(--teal-deep);
-    display:block;
-    transition:transform .3s ease;
-  }
-  .snap-item:hover .num{ transform:translateY(-2px); }
-  .snap-item .lbl{ font-size:12.5px; color:var(--gray); margin-top:4px; line-height:1.4; }
+<!--  /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; SNAPSHOT STRIP &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+<!--  .snapshot{-->
+<!--    display:grid;-->
+<!--    grid-template-columns:repeat(4, 1fr);-->
+<!--    gap:1px;-->
+<!--    background:var(&#45;&#45;border);-->
+<!--    border:1px solid var(&#45;&#45;border);-->
+<!--    border-radius:10px;-->
+<!--    overflow:hidden;-->
+<!--    margin-top:8px;-->
+<!--    box-shadow:0 1px 3px rgba(30,41,59,0.04);-->
+<!--  }-->
+<!--  .snap-item{-->
+<!--    background:var(&#45;&#45;card);-->
+<!--    padding:20px 16px;-->
+<!--    text-align:center;-->
+<!--    transition:background .3s ease;-->
+<!--  }-->
+<!--  .snap-item:hover{ background:var(&#45;&#45;teal-tint); }-->
+<!--  .snap-item .num{-->
+<!--    font-family:var(&#45;&#45;serif); font-weight:700; font-size:26px; color:var(&#45;&#45;teal-deep);-->
+<!--    display:block;-->
+<!--    transition:transform .3s ease;-->
+<!--  }-->
+<!--  .snap-item:hover .num{ transform:translateY(-2px); }-->
+<!--  .snap-item .lbl{ font-size:12.5px; color:var(&#45;&#45;gray); margin-top:4px; line-height:1.4; }-->
 
-  /* ---------------- TEACHING ---------------- */
-  .teach-photos{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-  }
-  .teach-photo-half{
-    border-radius:14px;
-    overflow:hidden;
-    border:1px solid var(--border);
-    box-shadow:0 1px 2px rgba(30,41,59,0.03), 0 10px 32px rgba(30,41,59,0.08);
-    max-height:420px;
-  }
-  .teach-photo-half img{
-    width:100%; height:100%;
-    max-height:420px;
-    object-fit:cover;
-    object-position:50% 30%;
-    transition:transform .7s cubic-bezier(.22,.61,.36,1);
-  }
-  .teach-photo-half:hover img{ transform:scale(1.02); }
-  @media (max-width:720px){
-    .teach-photos{ grid-template-columns:1fr; }
-    .teach-photo-half{ max-height:280px; }
-    .teach-photo-half img{ max-height:280px; }
-  }
-  .teach-caption{
-    font-size:13px; color:var(--gray); margin-top:10px; line-height:1.5;
-  }
-  .teach-body{
-    max-width:640px;
-    margin-top:36px;
-  }
-  .school-note{
-    background:var(--teal-tint);
-    border-radius:10px;
-    padding:18px 20px;
-    margin-bottom:22px;
-    border-left:3px solid var(--teal);
-  }
-  .school-note p{ color:var(--teal-deep); font-size:14.5px; margin:0; }
-  .skill-tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
-  .skill-tags span{
-    font-size:13px; background:var(--card); border:1px solid var(--border);
-    padding:6px 12px; border-radius:999px; color:var(--ink-soft);
-    transition:border-color .25s ease, color .25s ease, transform .25s ease;
-  }
-  .skill-tags span:hover{
-    border-color:var(--teal); color:var(--teal-deep); transform:translateY(-1px);
-  }
-  .teach-list{ margin-top:18px; padding-left:0; list-style:none; }
-  .teach-list li{
-    padding-left:22px; position:relative; margin-bottom:10px;
-    font-size:15px; color:var(--ink-soft);
-  }
-  .teach-list li::before{
-    content:"";
-    position:absolute; left:0; top:8px;
-    width:7px; height:7px; border-radius:50%;
-    background:var(--teal);
-  }
+<!--  /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; TEACHING &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+<!--  .teach-photos{-->
+<!--    display:grid;-->
+<!--    grid-template-columns:1fr 1fr;-->
+<!--    gap:12px;-->
+<!--  }-->
+<!--  .teach-photo-half{-->
+<!--    border-radius:14px;-->
+<!--    overflow:hidden;-->
+<!--    border:1px solid var(&#45;&#45;border);-->
+<!--    box-shadow:0 1px 2px rgba(30,41,59,0.03), 0 10px 32px rgba(30,41,59,0.08);-->
+<!--    max-height:420px;-->
+<!--  }-->
+<!--  .teach-photo-half img{-->
+<!--    width:100%; height:100%;-->
+<!--    max-height:420px;-->
+<!--    object-fit:cover;-->
+<!--    object-position:50% 30%;-->
+<!--    transition:transform .7s cubic-bezier(.22,.61,.36,1);-->
+<!--  }-->
+<!--  .teach-photo-half:hover img{ transform:scale(1.02); }-->
+<!--  @media (max-width:720px){-->
+<!--    .teach-photos{ grid-template-columns:1fr; }-->
+<!--    .teach-photo-half{ max-height:280px; }-->
+<!--    .teach-photo-half img{ max-height:280px; }-->
+<!--  }-->
+<!--  .teach-caption{-->
+<!--    font-size:13px; color:var(&#45;&#45;gray); margin-top:10px; line-height:1.5;-->
+<!--  }-->
+<!--  .teach-body{-->
+<!--    max-width:640px;-->
+<!--    margin-top:36px;-->
+<!--  }-->
+<!--  .school-note{-->
+<!--    background:var(&#45;&#45;teal-tint);-->
+<!--    border-radius:10px;-->
+<!--    padding:18px 20px;-->
+<!--    margin-bottom:22px;-->
+<!--    border-left:3px solid var(&#45;&#45;teal);-->
+<!--  }-->
+<!--  .school-note p{ color:var(&#45;&#45;teal-deep); font-size:14.5px; margin:0; }-->
+<!--  .skill-tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }-->
+<!--  .skill-tags span{-->
+<!--    font-size:13px; background:var(&#45;&#45;card); border:1px solid var(&#45;&#45;border);-->
+<!--    padding:6px 12px; border-radius:999px; color:var(&#45;&#45;ink-soft);-->
+<!--    transition:border-color .25s ease, color .25s ease, transform .25s ease;-->
+<!--  }-->
+<!--  .skill-tags span:hover{-->
+<!--    border-color:var(&#45;&#45;teal); color:var(&#45;&#45;teal-deep); transform:translateY(-1px);-->
+<!--  }-->
+<!--  .teach-list{ margin-top:18px; padding-left:0; list-style:none; }-->
+<!--  .teach-list li{-->
+<!--    padding-left:22px; position:relative; margin-bottom:10px;-->
+<!--    font-size:15px; color:var(&#45;&#45;ink-soft);-->
+<!--  }-->
+<!--  .teach-list li::before{-->
+<!--    content:"";-->
+<!--    position:absolute; left:0; top:8px;-->
+<!--    width:7px; height:7px; border-radius:50%;-->
+<!--    background:var(&#45;&#45;teal);-->
+<!--  }-->
 
-  /* ---------------- PROJECTS ---------------- */
-  .project-card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:28px;
-    margin-bottom:28px;
-    box-shadow:0 1px 2px rgba(30,41,59,0.03), 0 4px 16px rgba(30,41,59,0.04);
-    transition:box-shadow .35s ease, transform .35s ease, border-color .35s ease;
-  }
-  .project-card:hover{
-    box-shadow:0 2px 4px rgba(30,41,59,0.05), 0 12px 28px rgba(30,41,59,0.08);
-    transform:translateY(-2px);
-    border-color:#DCD5C8;
-  }
-  .project-head{
-    display:flex; justify-content:space-between; align-items:flex-start;
-    gap:16px; margin-bottom:6px; flex-wrap:wrap;
-  }
-  .project-title{
-    font-family:var(--serif); font-weight:600; font-size:22px; color:var(--ink);
-  }
-  .project-tag{
-    font-size:12.5px; color:var(--teal-deep); background:var(--teal-tint);
-    padding:4px 10px; border-radius:999px; font-weight:500; white-space:nowrap;
-  }
-  .project-desc{ margin:10px 0 20px; font-size:15px; max-width:640px; }
+<!--  /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; PROJECTS &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+<!--  .project-card{-->
+<!--    background:var(&#45;&#45;card);-->
+<!--    border:1px solid var(&#45;&#45;border);-->
+<!--    border-radius:14px;-->
+<!--    padding:28px;-->
+<!--    margin-bottom:28px;-->
+<!--    box-shadow:0 1px 2px rgba(30,41,59,0.03), 0 4px 16px rgba(30,41,59,0.04);-->
+<!--    transition:box-shadow .35s ease, transform .35s ease, border-color .35s ease;-->
+<!--  }-->
+<!--  .project-card:hover{-->
+<!--    box-shadow:0 2px 4px rgba(30,41,59,0.05), 0 12px 28px rgba(30,41,59,0.08);-->
+<!--    transform:translateY(-2px);-->
+<!--    border-color:#DCD5C8;-->
+<!--  }-->
+<!--  .project-head{-->
+<!--    display:flex; justify-content:space-between; align-items:flex-start;-->
+<!--    gap:16px; margin-bottom:6px; flex-wrap:wrap;-->
+<!--  }-->
+<!--  .project-title{-->
+<!--    font-family:var(&#45;&#45;serif); font-weight:600; font-size:22px; color:var(&#45;&#45;ink);-->
+<!--  }-->
+<!--  .project-tag{-->
+<!--    font-size:12.5px; color:var(&#45;&#45;teal-deep); background:var(&#45;&#45;teal-tint);-->
+<!--    padding:4px 10px; border-radius:999px; font-weight:500; white-space:nowrap;-->
+<!--  }-->
+<!--  .project-desc{ margin:10px 0 20px; font-size:15px; max-width:640px; }-->
 
-  .video-wrap{
-    border-radius:10px; overflow:hidden; border:1px solid var(--border);
-    margin-bottom:24px; background:#000;
-    box-shadow:0 4px 20px rgba(30,41,59,0.08);
-  }
-  .video-wrap video{ width:100%; display:block; }
+<!--  .video-wrap{-->
+<!--    border-radius:10px; overflow:hidden; border:1px solid var(&#45;&#45;border);-->
+<!--    margin-bottom:24px; background:#000;-->
+<!--    box-shadow:0 4px 20px rgba(30,41,59,0.08);-->
+<!--  }-->
+<!--  .video-wrap video{ width:100%; display:block; }-->
 
-  /* skills diagram */
-  .pipeline{
-    display:flex; align-items:stretch; gap:0;
-    margin:24px 0; flex-wrap:wrap;
-  }
-  .pipe-step{
-    flex:1; min-width:140px;
-    background:var(--teal-tint);
-    border-radius:10px;
-    padding:16px 14px;
-    position:relative;
-    transition:transform .3s ease, box-shadow .3s ease;
-  }
-  .pipe-step:hover{
-    transform:translateY(-3px);
-    box-shadow:0 8px 20px rgba(59,110,94,0.15);
-  }
-  .pipe-step + .pipe-step{ margin-left:28px; }
-  .pipe-step .step-num{
-    font-size:11px; font-weight:600; color:var(--teal-deep); letter-spacing:0.05em;
-  }
-  .pipe-step h4{
-    font-family:var(--serif); font-size:16px; font-weight:600; color:var(--ink);
-    margin:6px 0 6px;
-  }
-  .pipe-step p{ font-size:12.5px; color:var(--ink-soft); margin:0; line-height:1.5; }
-  .pipe-arrow{
-    display:flex; align-items:center; color:var(--teal); font-size:18px;
-    margin:0 -14px; position:relative; z-index:2;
-    transition:transform .3s ease;
-  }
-  .pipeline:hover .pipe-arrow{ transform:translateX(2px); }
+<!--  /* skills diagram */-->
+<!--  .pipeline{-->
+<!--    display:flex; align-items:stretch; gap:0;-->
+<!--    margin:24px 0; flex-wrap:wrap;-->
+<!--  }-->
+<!--  .pipe-step{-->
+<!--    flex:1; min-width:140px;-->
+<!--    background:var(&#45;&#45;teal-tint);-->
+<!--    border-radius:10px;-->
+<!--    padding:16px 14px;-->
+<!--    position:relative;-->
+<!--    transition:transform .3s ease, box-shadow .3s ease;-->
+<!--  }-->
+<!--  .pipe-step:hover{-->
+<!--    transform:translateY(-3px);-->
+<!--    box-shadow:0 8px 20px rgba(59,110,94,0.15);-->
+<!--  }-->
+<!--  .pipe-step + .pipe-step{ margin-left:28px; }-->
+<!--  .pipe-step .step-num{-->
+<!--    font-size:11px; font-weight:600; color:var(&#45;&#45;teal-deep); letter-spacing:0.05em;-->
+<!--  }-->
+<!--  .pipe-step h4{-->
+<!--    font-family:var(&#45;&#45;serif); font-size:16px; font-weight:600; color:var(&#45;&#45;ink);-->
+<!--    margin:6px 0 6px;-->
+<!--  }-->
+<!--  .pipe-step p{ font-size:12.5px; color:var(&#45;&#45;ink-soft); margin:0; line-height:1.5; }-->
+<!--  .pipe-arrow{-->
+<!--    display:flex; align-items:center; color:var(&#45;&#45;teal); font-size:18px;-->
+<!--    margin:0 -14px; position:relative; z-index:2;-->
+<!--    transition:transform .3s ease;-->
+<!--  }-->
+<!--  .pipeline:hover .pipe-arrow{ transform:translateX(2px); }-->
 
-  .stack-row{ display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
-  .stack-row span{
-    font-size:12.5px; background:var(--paper); border:1px solid var(--border);
-    padding:5px 11px; border-radius:6px; color:var(--ink-soft);
-  }
+<!--  .stack-row{ display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }-->
+<!--  .stack-row span{-->
+<!--    font-size:12.5px; background:var(&#45;&#45;paper); border:1px solid var(&#45;&#45;border);-->
+<!--    padding:5px 11px; border-radius:6px; color:var(&#45;&#45;ink-soft);-->
+<!--  }-->
 
-  .project-links{ display:flex; gap:10px; margin-top:22px; flex-wrap:wrap; }
+<!--  .project-links{ display:flex; gap:10px; margin-top:22px; flex-wrap:wrap; }-->
 
-  /* ---------------- EXPERIENCE (compact) ---------------- */
-  .exp-row{
-    display:grid; grid-template-columns:140px 1fr; gap:20px;
-    padding:18px 16px; margin:0 -16px;
-    border-radius:10px;
-    transition:background .3s ease;
-  }
-  .exp-row:hover{ background:var(--card); }
-  .exp-row:not(:last-child){ border-bottom:1px solid var(--border); }
-  .exp-time{ font-size:13px; color:var(--gray); padding-top:2px; }
-  .exp-row h4{
-    font-family:var(--serif); font-size:17px; font-weight:600; color:var(--ink);
-    margin-bottom:4px;
-  }
-  .exp-row p{ font-size:14.5px; }
+<!--  /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; EXPERIENCE (compact) &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+<!--  .exp-row{-->
+<!--    display:grid; grid-template-columns:140px 1fr; gap:20px;-->
+<!--    padding:18px 16px; margin:0 -16px;-->
+<!--    border-radius:10px;-->
+<!--    transition:background .3s ease;-->
+<!--  }-->
+<!--  .exp-row:hover{ background:var(&#45;&#45;card); }-->
+<!--  .exp-row:not(:last-child){ border-bottom:1px solid var(&#45;&#45;border); }-->
+<!--  .exp-time{ font-size:13px; color:var(&#45;&#45;gray); padding-top:2px; }-->
+<!--  .exp-row h4{-->
+<!--    font-family:var(&#45;&#45;serif); font-size:17px; font-weight:600; color:var(&#45;&#45;ink);-->
+<!--    margin-bottom:4px;-->
+<!--  }-->
+<!--  .exp-row p{ font-size:14.5px; }-->
 
-  /* ---------------- CONTACT ---------------- */
-  .contact-section{ text-align:center; padding:72px 0; }
-  .contact-section h2{ justify-content:center; }
-  .contact-section p{ max-width:480px; margin:0 auto 28px; }
-  .contact-links{ display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+<!--  /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; CONTACT &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+<!--  .contact-section{ text-align:center; padding:72px 0; }-->
+<!--  .contact-section h2{ justify-content:center; }-->
+<!--  .contact-section p{ max-width:480px; margin:0 auto 28px; }-->
+<!--  .contact-links{ display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }-->
 
-  footer{
-    text-align:center; padding:28px 0; font-size:13px; color:var(--gray);
-  }
+<!--  footer{-->
+<!--    text-align:center; padding:28px 0; font-size:13px; color:var(&#45;&#45;gray);-->
+<!--  }-->
 
-  /* ---------------- RESPONSIVE ---------------- */
-  @media (max-width:720px){
-    .hero{ grid-template-columns:1fr; text-align:center; padding-top:48px; }
-    .hero-photo{ margin:0 auto; }
-    .hero-links{ justify-content:center; }
-    .snapshot{ grid-template-columns:repeat(2,1fr); }
+<!--  /* &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; RESPONSIVE &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; */-->
+<!--  @media (max-width:720px){-->
+<!--    .hero{ grid-template-columns:1fr; text-align:center; padding-top:48px; }-->
+<!--    .hero-photo{ margin:0 auto; }-->
+<!--    .hero-links{ justify-content:center; }-->
+<!--    .snapshot{ grid-template-columns:repeat(2,1fr); }-->
 
-    .exp-row{ grid-template-columns:1fr; gap:4px; }
-    .pipe-step + .pipe-step{ margin-left:0; margin-top:28px; }
-    .pipeline{ flex-direction:column; }
-    .pipe-arrow{ display:none; }
-    section{ padding:48px 0; }
-    h2{ font-size:25px; }
-  }
+<!--    .exp-row{ grid-template-columns:1fr; gap:4px; }-->
+<!--    .pipe-step + .pipe-step{ margin-left:0; margin-top:28px; }-->
+<!--    .pipeline{ flex-direction:column; }-->
+<!--    .pipe-arrow{ display:none; }-->
+<!--    section{ padding:48px 0; }-->
+<!--    h2{ font-size:25px; }-->
+<!--  }-->
 
-  @media (prefers-reduced-motion:reduce){
-    html{ scroll-behavior:auto; }
-    .hero{ animation:none; }
-    .reveal{ opacity:1; transform:none; transition:none; }
-    *{ transition-duration:0.01ms !important; animation-duration:0.01ms !important; }
-  }
-</style>
-</head>
-<body>
+<!--  @media (prefers-reduced-motion:reduce){-->
+<!--    html{ scroll-behavior:auto; }-->
+<!--    .hero{ animation:none; }-->
+<!--    .reveal{ opacity:1; transform:none; transition:none; }-->
+<!--    *{ transition-duration:0.01ms !important; animation-duration:0.01ms !important; }-->
+<!--  }-->
+<!--</style>-->
+<!--</head>-->
+<!--<body>-->
 
-<a href="#main" class="skip-link">Skip to main content</a>
+<!--<a href="#main" class="skip-link">Skip to main content</a>-->
 
-<nav>
-  <div class="nav-inner">
-    <span class="nav-name">Mahir Jeet</span>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
-</nav>
+<!--<nav>-->
+<!--  <div class="nav-inner">-->
+<!--    <span class="nav-name">Mahir Jeet</span>-->
+<!--    <div class="nav-links">-->
+<!--      <a href="#about">About</a>-->
+<!--      <a href="#projects">Projects</a>-->
+<!--      <a href="#teaching">Teaching</a>-->
+<!--      <a href="#experience">Experience</a>-->
+<!--      <a href="#contact">Contact</a>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</nav>-->
 
-<main id="main">
+<!--<main id="main">-->
 
-  <!-- =========== ABOUT ============ -->
-  <section id="about" class="wrap">
-    <div class="hero">
-      <div class="hero-photo">
-        <img src="Gemini_Generated_Image_xthhwxthhwxthhwx.png" alt="Mahir Jeet">
-      </div>
-      <div class="hero-text">
-        <h1>Mahir Jeet</h1>
-        <p class="hero-role">AI Instructor, North Queens Community High School · Co-Founder, DateLift</p>
-        <p>I build software products with a team, most recently DateLift, a tool that reads legal documents and puts their deadlines straight onto your calendar. I also teach AI to students who are getting a second chance at their diploma.</p>
-        <div class="hero-links">
-          <a href="#projects" class="btn primary">See my projects</a>
-          <a href="mailto:mahir.jeet@email.com" class="btn">Email me</a>
-          <a href="https://linkedin.com/in/mahirjeet" class="btn" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-    </div>
+<!--  &lt;!&ndash; =========== ABOUT ============ &ndash;&gt;-->
+<!--  <section id="about" class="wrap">-->
+<!--    <div class="hero">-->
+<!--      <div class="hero-photo">-->
+<!--        <img src="Gemini_Generated_Image_xthhwxthhwxthhwx.png" alt="Mahir Jeet">-->
+<!--      </div>-->
+<!--      <div class="hero-text">-->
+<!--        <h1>Mahir Jeet</h1>-->
+<!--        <p class="hero-role">AI Instructor, North Queens Community High School · Co-Founder, DateLift</p>-->
+<!--        <p>I build software products with a team, most recently DateLift, a tool that reads legal documents and puts their deadlines straight onto your calendar. I also teach AI to students who are getting a second chance at their diploma.</p>-->
+<!--        <div class="hero-links">-->
+<!--          <a href="#projects" class="btn primary">See my projects</a>-->
+<!--          <a href="mailto:mahir.jeet@email.com" class="btn">Email me</a>-->
+<!--          <a href="https://linkedin.com/in/mahirjeet" class="btn" target="_blank" rel="noopener">LinkedIn</a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
 
-    <div class="snapshot">
-      <div class="snap-item">
-        <span class="num">200</span>
-        <span class="lbl">people taught at one public AI 101 event</span>
-      </div>
-      <div class="snap-item">
-        <span class="num">1</span>
-        <span class="lbl">product co-built with a team, start to finish: DateLift</span>
-      </div>
-      <div class="snap-item">
-        <span class="num">99%</span>
-        <span class="lbl">release stability across 5+ launches at TS4U</span>
-      </div>
-      <div class="snap-item">
-        <span class="num">2024</span>
-        <span class="lbl">B.S. Computer Science, North South University</span>
-      </div>
-    </div>
+<!--    <div class="snapshot">-->
+<!--      <div class="snap-item">-->
+<!--        <span class="num">200</span>-->
+<!--        <span class="lbl">people taught at one public AI 101 event</span>-->
+<!--      </div>-->
+<!--      <div class="snap-item">-->
+<!--        <span class="num">1</span>-->
+<!--        <span class="lbl">product co-built with a team, start to finish: DateLift</span>-->
+<!--      </div>-->
+<!--      <div class="snap-item">-->
+<!--        <span class="num">99%</span>-->
+<!--        <span class="lbl">release stability across 5+ launches at TS4U</span>-->
+<!--      </div>-->
+<!--      <div class="snap-item">-->
+<!--        <span class="num">2024</span>-->
+<!--        <span class="lbl">B.S. Computer Science, North South University</span>-->
+<!--      </div>-->
+<!--    </div>-->
 
-  </section>
+<!--  </section>-->
 
-  <!-- ============ PROJECTS ============ -->
-  <section id="projects" class="wrap reveal">
-    <div class="eyebrow">Projects</div>
-    <h2>What I've built</h2>
+<!--  &lt;!&ndash; ============ PROJECTS ============ &ndash;&gt;-->
+<!--  <section id="projects" class="wrap reveal">-->
+<!--    <div class="eyebrow">Projects</div>-->
+<!--    <h2>What I've built</h2>-->
 
-    <div class="project-card">
-      <div class="project-head">
-        <span class="project-title">DateLift</span>
-        <span class="project-tag">Co-Founder · team build</span>
-      </div>
-      <p class="project-desc">DateLift reads a legal document, finds every date that matters inside it, and puts those dates straight onto your Outlook calendar so deadlines stop getting buried in a PDF nobody reopens.</p>
+<!--    <div class="project-card">-->
+<!--      <div class="project-head">-->
+<!--        <span class="project-title">DateLift</span>-->
+<!--        <span class="project-tag">Co-Founder · team build</span>-->
+<!--      </div>-->
+<!--      <p class="project-desc">DateLift reads a legal document, finds every date that matters inside it, and puts those dates straight onto your Outlook calendar so deadlines stop getting buried in a PDF nobody reopens.</p>-->
 
-      <div class="video-wrap">
-        <video controls preload="metadata" poster="">
-          <source src="assets/datelift-ad.mp4" type="video/mp4">
-          Your browser doesn't support embedded video. <a href="assets/datelift-ad.mp4">Download the video</a> instead.
-        </video>
-      </div>
+<!--      <div class="video-wrap">-->
+<!--        <video controls preload="metadata" poster="">-->
+<!--          <source src="assets/datelift-ad.mp4" type="video/mp4">-->
+<!--          Your browser doesn't support embedded video. <a href="assets/datelift-ad.mp4">Download the video</a> instead.-->
+<!--        </video>-->
+<!--      </div>-->
 
-      <h4 style="font-family:var(--serif); font-size:16px; font-weight:600; margin-bottom:4px;">How it works</h4>
-      <div class="pipeline">
-        <div class="pipe-step">
-          <span class="step-num">STEP 1</span>
-          <h4>Read the document</h4>
-          <p>Scans an uploaded PDF using Azure Document Intelligence to pull out raw text and structure.</p>
-        </div>
-        <div class="pipe-arrow" aria-hidden="true">→</div>
-        <div class="pipe-step">
-          <span class="step-num">STEP 2</span>
-          <h4>Find the dates</h4>
-          <p>Picks out every meaningful date and deadline mentioned in the document.</p>
-        </div>
-        <div class="pipe-arrow" aria-hidden="true">→</div>
-        <div class="pipe-step">
-          <span class="step-num">STEP 3</span>
-          <h4>Sync the calendar</h4>
-          <p>Pushes each date to Outlook automatically via Microsoft Graph API with no copy-pasting.</p>
-        </div>
-      </div>
+<!--      <h4 style="font-family:var(&#45;&#45;serif); font-size:16px; font-weight:600; margin-bottom:4px;">How it works</h4>-->
+<!--      <div class="pipeline">-->
+<!--        <div class="pipe-step">-->
+<!--          <span class="step-num">STEP 1</span>-->
+<!--          <h4>Read the document</h4>-->
+<!--          <p>Scans an uploaded PDF using Azure Document Intelligence to pull out raw text and structure.</p>-->
+<!--        </div>-->
+<!--        <div class="pipe-arrow" aria-hidden="true">→</div>-->
+<!--        <div class="pipe-step">-->
+<!--          <span class="step-num">STEP 2</span>-->
+<!--          <h4>Find the dates</h4>-->
+<!--          <p>Picks out every meaningful date and deadline mentioned in the document.</p>-->
+<!--        </div>-->
+<!--        <div class="pipe-arrow" aria-hidden="true">→</div>-->
+<!--        <div class="pipe-step">-->
+<!--          <span class="step-num">STEP 3</span>-->
+<!--          <h4>Sync the calendar</h4>-->
+<!--          <p>Pushes each date to Outlook automatically via Microsoft Graph API with no copy-pasting.</p>-->
+<!--        </div>-->
+<!--      </div>-->
 
-      <div class="stack-row">
-        <span>FastAPI</span>
-        <span>Azure Document Intelligence</span>
-        <span>Microsoft Graph API</span>
-        <span>Azure SQL</span>
-        <span>Stripe billing</span>
-        <span>Docker</span>
-      </div>
+<!--      <div class="stack-row">-->
+<!--        <span>FastAPI</span>-->
+<!--        <span>Azure Document Intelligence</span>-->
+<!--        <span>Microsoft Graph API</span>-->
+<!--        <span>Azure SQL</span>-->
+<!--        <span>Stripe billing</span>-->
+<!--        <span>Docker</span>-->
+<!--      </div>-->
 
-      <div class="project-links">
-        <a href="https://datelift.ai" class="btn primary" target="_blank" rel="noopener">Visit datelift.ai</a>
-      </div>
-    </div>
+<!--      <div class="project-links">-->
+<!--        <a href="https://datelift.ai" class="btn primary" target="_blank" rel="noopener">Visit datelift.ai</a>-->
+<!--      </div>-->
+<!--    </div>-->
 
-    <div class="project-card">
-      <div class="project-head">
-        <span class="project-title">Weather prediction model</span>
-        <span class="project-tag">Classroom project</span>
-      </div>
-      <p class="project-desc">A linear regression model built in class to predict daily temperature from historic weather data, used to teach students how raw numbers in a spreadsheet turn into a working prediction.</p>
-      <div class="stack-row">
-        <span>Python</span>
-        <span>pandas</span>
-        <span>scikit-learn</span>
-        <span>Jupyter</span>
-      </div>
-    </div>
-  </section>
+<!--    <div class="project-card">-->
+<!--      <div class="project-head">-->
+<!--        <span class="project-title">Weather prediction model</span>-->
+<!--        <span class="project-tag">Classroom project</span>-->
+<!--      </div>-->
+<!--      <p class="project-desc">A linear regression model built in class to predict daily temperature from historic weather data, used to teach students how raw numbers in a spreadsheet turn into a working prediction.</p>-->
+<!--      <div class="stack-row">-->
+<!--        <span>Python</span>-->
+<!--        <span>pandas</span>-->
+<!--        <span>scikit-learn</span>-->
+<!--        <span>Jupyter</span>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
 
-  <!-- ============ TEACHING ============ -->
-  <section id="teaching" class="wrap reveal">
-    <div class="eyebrow">Teaching</div>
-    <h2>Teaching AI to students who are catching back up</h2>
+<!--  &lt;!&ndash; ============ TEACHING ============ &ndash;&gt;-->
+<!--  <section id="teaching" class="wrap reveal">-->
+<!--    <div class="eyebrow">Teaching</div>-->
+<!--    <h2>Teaching AI to students who are catching back up</h2>-->
 
-    <div class="teach-photos">
-      <div class="teach-photo-half">
-        <img src="IMG_1707.jpeg" alt="Mahir Jeet teaching students in the classroom">
-      </div>
-      <div class="teach-photo-half">
-        <img src="IMG_1714.jpeg" alt="Mahir Jeet working with students during a lesson">
-      </div>
-    </div>
-    <p class="teach-caption">Teaching AI and computer science at North Queens Community High School, with hands-on lessons built around real data.</p>
+<!--    <div class="teach-photos">-->
+<!--      <div class="teach-photo-half">-->
+<!--        <img src="IMG_1707.jpeg" alt="Mahir Jeet teaching students in the classroom">-->
+<!--      </div>-->
+<!--      <div class="teach-photo-half">-->
+<!--        <img src="IMG_1714.jpeg" alt="Mahir Jeet working with students during a lesson">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <p class="teach-caption">Teaching AI and computer science at North Queens Community High School, with hands-on lessons built around real data.</p>-->
 
-    <div class="teach-body">
-      <div class="school-note">
-        <p>North Queens Community High School is a NYC DOE transfer high school, a small school built for students ages 16 to 21 who've fallen behind on credits or left school before graduating. It gives students a second chance to catch up, pass their Regents exams, and earn a standard diploma.</p>
-      </div>
+<!--    <div class="teach-body">-->
+<!--      <div class="school-note">-->
+<!--        <p>North Queens Community High School is a NYC DOE transfer high school, a small school built for students ages 16 to 21 who've fallen behind on credits or left school before graduating. It gives students a second chance to catch up, pass their Regents exams, and earn a standard diploma.</p>-->
+<!--      </div>-->
 
-      <p>Most of my students haven't had a smooth path through school, and many have never been told they could be good at something technical. I teach AI and computer science in a way that meets them where they are: practical, hands-on, and free of jargon until they've earned it.</p>
+<!--      <p>Most of my students haven't had a smooth path through school, and many have never been told they could be good at something technical. I teach AI and computer science in a way that meets them where they are: practical, hands-on, and free of jargon until they've earned it.</p>-->
 
-      <ul class="teach-list">
-        <li>AI and CS instruction for students working toward a standard diploma</li>
-        <li>Hands-on lessons built around real, visible data that students can see change as they work</li>
-        <li>Adult learners outside the DOE, taught the same material with the same care</li>
-        <li>Designed and ran a public AI 101 event for 200 attendees with no technical background</li>
-      </ul>
+<!--      <ul class="teach-list">-->
+<!--        <li>AI and CS instruction for students working toward a standard diploma</li>-->
+<!--        <li>Hands-on lessons built around real, visible data that students can see change as they work</li>-->
+<!--        <li>Adult learners outside the DOE, taught the same material with the same care</li>-->
+<!--        <li>Designed and ran a public AI 101 event for 200 attendees with no technical background</li>-->
+<!--      </ul>-->
 
-      <div class="skill-tags">
-        <span>Python</span>
-        <span>Jupyter notebooks</span>
-        <span>pandas</span>
-        <span>Curriculum design</span>
-        <span>Public speaking</span>
-      </div>
-    </div>
-  </section>
+<!--      <div class="skill-tags">-->
+<!--        <span>Python</span>-->
+<!--        <span>Jupyter notebooks</span>-->
+<!--        <span>pandas</span>-->
+<!--        <span>Curriculum design</span>-->
+<!--        <span>Public speaking</span>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
 
-  <!-- ============ EXPERIENCE ============ -->
-  <section id="experience" class="wrap reveal">
-    <div class="eyebrow">Experience</div>
-    <h2>Where I've worked</h2>
+<!--  &lt;!&ndash; ============ EXPERIENCE ============ &ndash;&gt;-->
+<!--  <section id="experience" class="wrap reveal">-->
+<!--    <div class="eyebrow">Experience</div>-->
+<!--    <h2>Where I've worked</h2>-->
 
-    <div class="exp-row">
-      <div class="exp-time">2026 to Present</div>
-      <div>
-        <h4>Co-Founder &amp; Engineer, DateLift</h4>
-        <p>Co-founded and led engineering for a full SaaS product with a team, driving the backend, OCR, calendar sync, billing, and deployment while collaborating closely with teammates across the build.</p>
-      </div>
-    </div>
-    <div class="exp-row">
-      <div class="exp-time">Concurrent</div>
-      <div>
-        <h4>AI Instructor, North Queens Community High School</h4>
-        <p>Teach AI and computer science to transfer-school students ages 16–21, plus adult learners outside the DOE.</p>
-      </div>
-    </div>
-    <div class="exp-row">
-      <div class="exp-time">1 year</div>
-      <div>
-        <h4>Software Engineer, TS4U</h4>
-        <p>Built React/Redux frontend components and led QA automation for a multi-vendor e-commerce platform, keeping releases at 99% stability for 100k+ active users.</p>
-      </div>
-    </div>
-    <div class="exp-row">
-      <div class="exp-time">2024</div>
-      <div>
-        <h4>B.S., Computer Science, North South University</h4>
-        <p></p>
-      </div>
-    </div>
-  </section>
+<!--    <div class="exp-row">-->
+<!--      <div class="exp-time">2026 to Present</div>-->
+<!--      <div>-->
+<!--        <h4>Co-Founder &amp; Engineer, DateLift</h4>-->
+<!--        <p>Co-founded and led engineering for a full SaaS product with a team, driving the backend, OCR, calendar sync, billing, and deployment while collaborating closely with teammates across the build.</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="exp-row">-->
+<!--      <div class="exp-time">Concurrent</div>-->
+<!--      <div>-->
+<!--        <h4>AI Instructor, North Queens Community High School</h4>-->
+<!--        <p>Teach AI and computer science to transfer-school students ages 16–21, plus adult learners outside the DOE.</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="exp-row">-->
+<!--      <div class="exp-time">1 year</div>-->
+<!--      <div>-->
+<!--        <h4>Software Engineer, TS4U</h4>-->
+<!--        <p>Built React/Redux frontend components and led QA automation for a multi-vendor e-commerce platform, keeping releases at 99% stability for 100k+ active users.</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="exp-row">-->
+<!--      <div class="exp-time">2024</div>-->
+<!--      <div>-->
+<!--        <h4>B.S., Computer Science, North South University</h4>-->
+<!--        <p></p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
 
-  <!-- ============ CONTACT ============ -->
-  <section id="contact" class="wrap contact-section reveal">
-    <div class="eyebrow" style="justify-content:center; display:flex;">Get in touch</div>
-    <h2>Want to talk teaching, hiring, or DateLift?</h2>
-    <p>I'm always happy to hear from other educators, engineers, or anyone curious about what I'm building.</p>
-    <div class="contact-links">
-      <a href="mailto:mahirjeet@gmail.com" class="btn primary">Email me</a>
-      <a href="https://linkedin.com/in/mahirjeet" class="btn" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://datelift.ai" class="btn" target="_blank" rel="noopener">DateLift</a>
-    </div>
-  </section>
+<!--  &lt;!&ndash; ============ CONTACT ============ &ndash;&gt;-->
+<!--  <section id="contact" class="wrap contact-section reveal">-->
+<!--    <div class="eyebrow" style="justify-content:center; display:flex;">Get in touch</div>-->
+<!--    <h2>Want to talk teaching, hiring, or DateLift?</h2>-->
+<!--    <p>I'm always happy to hear from other educators, engineers, or anyone curious about what I'm building.</p>-->
+<!--    <div class="contact-links">-->
+<!--      <a href="mailto:mahirjeet@gmail.com" class="btn primary">Email me</a>-->
+<!--      <a href="https://linkedin.com/in/mahirjeet" class="btn" target="_blank" rel="noopener">LinkedIn</a>-->
+<!--      <a href="https://datelift.ai" class="btn" target="_blank" rel="noopener">DateLift</a>-->
+<!--    </div>-->
+<!--  </section>-->
 
-</main>
+<!--</main>-->
 
-<footer>
-  Mahir Jeet · New York, NY
-</footer>
+<!--<footer>-->
+<!--  Mahir Jeet · New York, NY-->
+<!--</footer>-->
 
-<script>
-  (function(){
-    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var targets = document.querySelectorAll('.reveal');
-    if (prefersReduced || !('IntersectionObserver' in window)) {
-      targets.forEach(function(el){ el.classList.add('is-visible'); });
-      return;
-    }
-    var observer = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    targets.forEach(function(el){ observer.observe(el); });
-  })();
-</script>
+<!--<script>-->
+<!--  (function(){-->
+<!--    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;-->
+<!--    var targets = document.querySelectorAll('.reveal');-->
+<!--    if (prefersReduced || !('IntersectionObserver' in window)) {-->
+<!--      targets.forEach(function(el){ el.classList.add('is-visible'); });-->
+<!--      return;-->
+<!--    }-->
+<!--    var observer = new IntersectionObserver(function(entries){-->
+<!--      entries.forEach(function(entry){-->
+<!--        if (entry.isIntersecting) {-->
+<!--          entry.target.classList.add('is-visible');-->
+<!--          observer.unobserve(entry.target);-->
+<!--        }-->
+<!--      });-->
+<!--    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });-->
+<!--    targets.forEach(function(el){ observer.observe(el); });-->
+<!--  })();-->
+<!--</script>-->
 
-</body>
-</html>
+<!--</body>-->
+<!--</html>-->
